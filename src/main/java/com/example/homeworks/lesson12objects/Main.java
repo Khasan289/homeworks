@@ -1,7 +1,7 @@
 package com.example.homeworks.lesson12objects;
 
 public class Main {
-    public static void printBook(String nameBook, String author, int year) {
+    public static void printBook(String nameBook, Author author, int year) {
         System.out.println(nameBook + " " + author + " " + year);
     }
 
@@ -14,8 +14,12 @@ public class Main {
         Author sunTzu = new Author("Сунь","Цзы");
         Book artOfWar = new Book("Искусство войны.", sunTzu, 2023);
         artOfWar.setPublicationYear(1992);
-        printBook(artOfWar.getNameBook(), artOfWar.getAuthor().getFullNameAuthor(), artOfWar.getPublicationYear());
-        printBook(threePiglets.getNameBook(), threePiglets.getAuthor().getFullNameAuthor(), threePiglets.getPublicationYear());
+        artOfWar.printBook();
+
+        //printBook(artOfWar.getNameBook(), artOfWar.getAuthor(), artOfWar.getPublicationYear());
+        //printBook(threePiglets.getNameBook(), threePiglets.getAuthor(), threePiglets.getPublicationYear());
+
+
 
     }
 }

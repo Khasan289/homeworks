@@ -18,10 +18,11 @@ public class Author {
         return this.surname;
     }
 
-    public String getFullNameAuthor() {
-        return this.name + " " + surname;
-
+    @Override
+    public String toString() {
+        return name + " " + surname;
     }
+
 
 
 }

@@ -26,4 +26,13 @@ public class Book {
     public void setPublicationYear(int year) {
         this.publicationYear = year;
     }
+
+    public String toString() {
+        return nameBook + ' ' + author + ' ' + publicationYear;
+    }
+
+    public void printBook() {
+        System.out.println(toString());
+    }
+
 }
