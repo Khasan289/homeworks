@@ -1,5 +1,7 @@
 package com.example.homeworks.lesson12objects;
 
+import java.util.Objects;
+
 public class Book {
     private String nameBook;
     private Author author;
@@ -28,7 +30,20 @@ public class Book {
     }
 
     public String toString() {
-        return nameBook + ' ' + author + ' ' + publicationYear;
+        return nameBook + ' ' + author.toString() + ' ' + publicationYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return nameBook.equals(book.nameBook) && author.equals(book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameBook, author);
     }
 
     public void printBook() {
